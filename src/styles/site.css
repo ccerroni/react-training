@@ -1,52 +1,104 @@
 body {
-    background-color: #132226;
-    padding: 20px;
-    margin: 0;
-    color: #FFF;
-  }
-  h1, h2, p, ul, li {
-    font-family: sans-serif;
-  }
-  ul.header li {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-  }
-  ul.header {
-    background-color: #A4978E;
-    padding: 0;
-  }
-  ul.header li a {
-    color: #FFF;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
-  }
-  .content {
-    background-color: #525B56;
-    padding: 20px;
-  }
-  .content h2 {
-    padding: 0;
-    margin: 0;
-  }
-  .content li {
-    margin-bottom: 10px;
-  }
+  background-color: #132226;
+  padding: 20px;
+  margin: 0;
+  color: #FFF;
+}
 
-  .active {
-    background-color: #BE9063;
-  }
+.header-content {
+   grid-area: header;
+}
+.menu-content { grid-area: leftMenu; min-width: 300px;}
+.content { grid-area: main; }
+.footer-content { 
+  grid-area: footer; 
+  background-color: #A4978E;
+  border-radius: 7px;
+}
 
-  a {
-      color: #A4978E;
-  }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'leftMenu main main main main main'
+    'leftMenu footer footer footer footer footer';
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns: 300px 200px auto 40px;
+}
 
-  /*
-  #040C0E  --Black
-  #132226  -- like blue dark
-  #525B56  -- dark blue a little light
-  #BE9063  -- like orange
-  #A4978E  -- lighter
-  */
+.menu-content {
+  background-color: #525B56;
+  border-radius: 7px;
+}
+
+
+h1, h2, p, ul, li {
+  font-family: sans-serif;
+}
+
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.header {
+  background-color: #A4978E;
+  padding: 0;
+  border-radius: 7px;
+}
+
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+
+.content {
+  background-color: #525B56;
+  padding: 20px;
+  border-radius: 7px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+
+.active {
+  background-color: #BE9063;
+  border-radius: 7px;
+}
+
+a {
+    color: #A4978E;
+}
+
+.left-menu > li a.active {
+  background-color: transparent;
+  color: #FFF;
+}
+
+
+.left-menu > li {
+  color: #FFF;
+  font-weight: bold;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.left-menu > li a {
+  text-decoration: none;
+}
+/*
+#040C0E  --Black
+#132226  -- like blue dark
+#525B56  -- dark blue a little light
+#BE9063  -- like orange
+#A4978E  -- lighter
+*/

@@ -8,22 +8,33 @@ class Main extends Component {
   render() {
     return (
       <HashRouter>
-        <div>
-          <ul className="header">
-            <li><NavLink exact to="/">Home</NavLink></li>
-            <li><NavLink to="/stuff">Stuff</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
-            {/* <li><NavLink to="/another">Another</NavLink></li> */}
-          </ul>
+        <div className="grid-container">
+          <div className="header-content">
+            <ul className="header">
+              <li><NavLink exact to="/">Home</NavLink></li>
+              <li><NavLink to="/stuff">Stuff</NavLink></li>
+              <li><NavLink to="/contact">Contact</NavLink></li>
+            </ul>
+          </div>
+          <div className="menu-content">
+          <ul className="left-menu">
+              <li><NavLink exact to="/">Home</NavLink></li>
+              <li><NavLink to="/stuff">Stuff</NavLink></li>
+              <li><NavLink to="/contact">Contact</NavLink></li>
+            </ul>
+          </div>
           <div className="content">
-            <Route exact path="/" component={Home}/>
-            <Route path="/stuff" component={Stuff}/>
-            <Route path="/contact" component={Contact}/>
+            <Route exact path="/" component={Home} />
+            <Route path="/stuff" component={Stuff} />
+            <Route path="/contact" component={Contact} />
+          </div>
+          <div className="footer-content">
+            <p>Footer</p>
           </div>
         </div>
-        </HashRouter>
+      </HashRouter>
     );
   }
 }
- 
+
 export default Main;
