@@ -3,13 +3,14 @@ import { Route, NavLink, HashRouter } from "react-router-dom";
 import Home from "./home";
 import Stuff from "./stuff";
 import Contact from "./contact";
+import DefaultStyles from "../styles/defaultStyles"
 
 class Main extends Component {
   render() {
     return (
       <HashRouter>
         <div className="grid-container">
-          <div className="header-content">
+          <div style={DefaultStyles.headerContent}>
             <ul className="header">
               <li><NavLink exact to="/">Home</NavLink></li>
               <li><NavLink to="/stuff">Stuff</NavLink></li>

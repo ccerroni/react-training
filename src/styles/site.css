@@ -5,9 +5,10 @@ body {
   color: #FFF;
 }
 
-.header-content {
+/* .header-content {
    grid-area: header;
-}
+} */
+
 .menu-content { grid-area: leftMenu; min-width: 300px;}
 .content { grid-area: main; }
 .footer-content { 
